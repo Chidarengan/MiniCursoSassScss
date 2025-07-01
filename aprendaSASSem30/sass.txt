@@ -1,0 +1,32 @@
+1. Introdução ao SASS
+O que é SASS?
+Instalação e configuração básica
+Node.js
+    Javascript
+
+npm (Node Package Manager)
+    Compilação automática
+
+2.Estrutura e Sintaxe Básica do SASS
+Variáveis
+Nesting
+Partials e Importações
+
+3.Funcionalidades Avançadas do SASS
+Mixins
+Extends
+Operações Matemáticas
+
+4.Dicas Finais
+Usar variáveis, mixins e extends
+Organizar o projeto com partials
+CSS gerado é mais limpo
+
+FAZENDO FUNCIONAR
+da no terminal npm init, da um nome e vai apertando enter. 
+depois da:" npm install --save-dev sass " pra salvar no projeto, ou " npm install -g sass " pra instalar de forma global
+
+vai em package.json, a parte teste voce apaga e muda pra compilar o nome, e escreve dentro dela sass style.scss e style.css dentro de aspas duplas (talvez mude com os nomes dos arquivos) e ai da " npm run compilar "
+pode dar:     "observar": "sass --watch style.scss style.css" nos scripts pras mudanças ficarem automaticas, da npm run observar
+
+ate o momento acho sass meio bosta, pra mexer no css voce meche no arquivo style.scss pq ele que ta feedando o style.css, se mudar só no css da ruim pq ele logo vai mudar pro default do scss

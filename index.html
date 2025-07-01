@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cogumelos Místicos de Dark Souls</title>
+    <style>
+        /* Configuração de estilo em CSS puro - note a repetição para variações 
+        .mushroom-card {
+            background-color: #3a1f0f;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .mushroom-card:hover {
+            background-color: #4a2f1f;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }*/
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Arquivo compilado do SCSS -->
+</head>
+<body>
+    <header class="main-header">
+        <h1><i class="fas fa-shroom"></i> Cogumelos de Lordran</h1>
+        <p>Os fungos místicos que habitam os reinos sombrios</p>
+    </header>
+
+    <main class="container">
+        <section class="mushroom-gallery">
+            <article class="mushroom-card" data-type="toxic">
+                <h2>Cogumelo Tóxico</h2>
+                <div class="mushroom-image toxic"></div>
+                <p>Encontrado nos pântanos de Blighttown, este cogumelo exala uma névoa venenosa que corrói até as almas mais resistentes. Dizem que os habitantes locais desenvolveram imunidade após gerações de exposição.</p>
+                <button class="mushroom-btn" onclick="showEffect('toxic')">Ver Efeito</button>
+            </article>
+
+            <article class="mushroom-card" data-type="giant">
+                <h2>Cogumelo Gigante</h2>
+                <div class="mushroom-image giant"></div>
+                <p>Guardas silenciosos das florestas profundas, esses colossos fúngicos são mais resistentes que a armadura de Havel. Alguns peregrinos afirmam que eles sussurram segredos antigos quando a lua está cheia.</p>
+                <button class="mushroom-btn" onclick="showEffect('giant')">Ver Efeito</button>
+            </article>
+
+            <article class="mushroom-card" data-type="luminescent">
+                <h2>Cogumelo Luminescente</h2>
+                <div class="mushroom-image luminescent"></div>
+                <p>Nas cavernas mais profundas de Tomb of the Giants, onde a luz é uma memória distante, esses fungos brilhantes servem como faróis para os desesperados. Mas cuidado - onde há luz nas trevas, há sempre algo espreitando.</p>
+                <button class="mushroom-btn" onclick="showEffect('luminescent')">Ver Efeito</button>
+            </article>
+        </section>
+
+        <aside class="mushroom-lore">
+            <h3>Lendas Fúngicas</h3>
+            <p>Diz a lenda que os cogumelos de Lordran são remanescentes de uma era anterior ao Fogo, quando a terra era regida por seres arbóreos anciões. Após a chegada da Chama, algumas formas de vida se adaptaram, enquanto outras, como os cogumelos, permaneceram como testemunhas silenciosas do tempo.</p>
+            
+            <div class="lore-highlight">
+                <p>"E nos cantos mais úmidos do mundo, onde a luz da Chama mal alcança, os filhos da terra antiga ainda crescem, indiferentes aos deuses e aos homens." - Fragmento dos Anais Esquecidos</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="main-footer">
+        <p>Estudo dos Fungos de Lordran &copy; 2023 - Todos os direitos reservados</p>
+        <div class="footer-links">
+            <a href="#" class="footer-link">Biblioteca</a>
+            <a href="#" class="footer-link">Expedições</a>
+            <a href="#" class="footer-link">Contato</a>
+        </div>
+    </footer>
+
+    <script>
+        function showEffect(type) {
+            const effects = {
+                toxic: 'Efeito: Envenenamento prolongado (5 HP/sec por 300 segundos)',
+                giant: 'Efeito: +50% de resistência física por 60 segundos',
+                luminescent: 'Efeito: Emite luz em área de 10m por 180 segundos'
+            };
+            
+            alert(effects[type] || 'Efeito desconhecido');
+        }
+
+        // Efeito de parallax básico
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            const toxicMushroom = document.querySelector('.toxic');
+            const giantMushroom = document.querySelector('.giant');
+            
+            if (toxicMushroom) {
+                toxicMushroom.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+            }
+            
+            if (giantMushroom) {
+                giantMushroom.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+            }
+        });
+    </script>
+</body>
+</html>

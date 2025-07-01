@@ -1,0 +1,23 @@
+{
+  "name": "sassem30",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compilar": "sass style.scss style.css ",
+    "observar": "sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chidarengan/MiniCursoSassScss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chidarengan/MiniCursoSassScss/issues"
+  },
+  "homepage": "https://github.com/Chidarengan/MiniCursoSassScss#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}

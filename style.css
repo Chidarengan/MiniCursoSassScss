@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* Configuração de estilo em SCSS - note a aninhamento, variáveis e mixins */
+.main-header {
+  background: linear-gradient(to right, #3a0f0f, black);
+  color: #e8d8c0;
+  padding: 2rem;
+  text-align: center;
+}
+.main-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.main-header h1 i {
+  margin-right: 1rem;
+}
+.main-header p {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.mushroom-card {
+  background-color: #3a0f0f;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  color: #e8d8c0;
+  transition: all 0.3s ease;
+}
+.mushroom-card:hover {
+  background-color: #4a2f1f;
+  box-shadow: 0 6px 12px rgba(218, 202, 202, 0.3);
+  transform: translateY(-3px);
+}
+.mushroom-card h2 {
+  color: rgb(252.4593023256, 250.6918604651, 248.0406976744);
+  border-bottom: 1px solid rgba(232, 216, 192, 0.3);
+  padding-bottom: 0.5rem;
+}
+.mushroom-card .mushroom-image {
+  height: 150px;
+  margin: 1rem 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mushroom-card .mushroom-image.toxic {
+  background-image: url("toxic-mushroom.png");
+}
+.mushroom-card .mushroom-image.giant {
+  background-image: url("giant-mushroom.png");
+}
+.mushroom-card .mushroom-image.luminescent {
+  background-image: url("luminescent-mushroom.png");
+}
+
+.mushroom-btn {
+  background: rgb(17.4794520548, 4.5205479452, 4.5205479452);
+  color: #e8d8c0;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.mushroom-btn:hover {
+  background: rgb(98.5205479452, 25.4794520548, 25.4794520548);
+}
+.mushroom-btn:active {
+  transform: translateY(1px);
+}
+
+.lore-highlight {
+  border-left: 3px solid #4a2f1f;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  background: rgba(58, 15, 15, 0.3);
+}
+
+/* Funcionalidade exclusiva do SASS - loops para classes */
+.mushroom-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.mushroom-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.mushroom-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/*# sourceMappingURL=style.css.map */
