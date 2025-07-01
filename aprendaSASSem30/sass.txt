@@ -30,3 +30,4 @@ vai em package.json, a parte teste voce apaga e muda pra compilar o nome, e escr
 pode dar:     "observar": "sass --watch style.scss style.css" nos scripts pras mudanças ficarem automaticas, da npm run observar
 
 ate o momento acho sass meio bosta, pra mexer no css voce meche no arquivo style.scss pq ele que ta feedando o style.css, se mudar só no css da ruim pq ele logo vai mudar pro default do scss
+
